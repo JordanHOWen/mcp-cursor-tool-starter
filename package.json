@@ -1,5 +1,5 @@
 {
-	"name": "github-tools",
+	"name": "mcp-tools",
 	"type": "module",
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.4.0",
@@ -7,6 +7,22 @@
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.0",
-		"typescript": "^5.7.3"
+		"@vitest/coverage-v8": "^3.0.7",
+		"typescript": "^5.7.3",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^3.0.7"
+	},
+	"scripts": {
+		"start": "node src/index.ts",
+		"start:weather": "node src/weather.ts",
+		"start:blog": "node src/blog.ts",
+		"build": "pnpm build:all",
+		"build:all": "pnpm build:hello && pnpm build:weather && pnpm build:blog",
+		"build:hello": "mkdir -p bin && bun build src/index.ts --compile --minify --sourcemap --outfile bin/hello",
+		"build:weather": "mkdir -p bin && bun build src/weather.ts --compile --minify --sourcemap --outfile bin/weather",
+		"build:blog": "mkdir -p bin && bun build src/blog.ts --compile --minify --sourcemap --outfile bin/blog",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage"
 	}
 }
