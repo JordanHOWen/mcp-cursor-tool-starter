@@ -1,12 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { setupMcpClientTest } from './mcp-client';
-import { join } from 'node:path';
-import { mkdtemp } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-
+import { setupMcpClientTest } from './mcp-client.js';
 describe('MCP Tools Server', () => {
     // Set up the client that connects to our server
-    const getClient = setupMcpClientTest('src/index.ts');
+    const getClient = setupMcpClientTest('src/hello.ts');
 
     it('should list available tools', async () => {
         const client = getClient();

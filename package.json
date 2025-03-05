@@ -12,15 +12,12 @@
 		"vite-tsconfig-paths": "^5.1.4",
 		"vitest": "^3.0.7"
 	},
-	"scripts": {
-		"start": "node src/index.ts",
-		"start:weather": "node src/weather.ts",
-		"start:blog": "node src/blog.ts",
+	"scripts": {		
 		"build": "pnpm build:all",
 		"build:all": "pnpm build:hello && pnpm build:weather && pnpm build:blog",
-		"build:hello": "mkdir -p bin && bun build src/index.ts --compile --minify --sourcemap --outfile bin/hello",
-		"build:weather": "mkdir -p bin && bun build src/weather.ts --compile --minify --sourcemap --outfile bin/weather",
-		"build:blog": "mkdir -p bin && bun build src/blog.ts --compile --minify --sourcemap --outfile bin/blog",
+		"build:hello": "mkdir -p bin && bun build src/hello.ts --compile --minify --sourcemap --outfile bin/mcp-hello",
+		"build:weather": "mkdir -p bin && bun build src/weather.ts --compile --minify --sourcemap --outfile bin/mcp-weather",
+		"build:blog": "mkdir -p bin && bun build src/blog.ts --compile --minify --sourcemap --outfile bin/mcp-blog",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage"
