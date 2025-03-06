@@ -9,6 +9,42 @@ https://github.com/modelcontextprotocol/typescript-sdk
 - Node.js 23+ (or Bun/Deno/Anything that supports running .ts files)
 - Bun (for building executables)
 
+## Installing Bun
+
+If you don't have Bun installed, you can install it using one of the following methods:
+
+### macOS and Linux
+
+```bash
+# Using curl (recommended)
+curl -fsSL https://bun.sh/install | bash
+
+# Using Homebrew
+brew install oven-sh/bun/bun
+
+# Using npm
+npm install -g bun
+```
+
+### Windows
+
+```bash
+# Using PowerShell
+powershell -c "irm bun.sh/install.ps1|iex"
+
+# Using npm
+npm install -g bun
+
+# Using Scoop
+scoop install bun
+```
+
+Verify your installation by running:
+
+```bash
+bun --version
+```
+
 ## Installation
 
 ```bash
