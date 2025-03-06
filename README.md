@@ -45,19 +45,6 @@ To create a new tool:
 
 ## Usage
 
-### Running from Source
-
-```bash
-# Run the Hello tool
-pnpm start
-
-# Run the Weather tool
-pnpm start:weather
-
-# Run the Blog tool
-pnpm start:blog
-```
-
 ### Building Executables
 
 ```bash
